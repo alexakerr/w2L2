@@ -14,17 +14,9 @@ def save():
     except ValueError as err:
         return jsonify({"error": str(err)}), 400
 
-
-
-
-
 def find_all():
     users = userService.find_all()
     return users_schema.jsonify(users), 200
-
-
-
-
 
 def login():
     try:
